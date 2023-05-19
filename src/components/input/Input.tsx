@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { commandExists } from "@/utils/commandExists"
 import { useShell } from "@/utils/shellProvider"
 import { handleTabCompletion } from "@/utils/tabCompletion"
@@ -6,12 +6,7 @@ import { useTheme } from "@/utils/themeProvider"
 
 import { Ps1 } from "../ps1"
 
-interface InputProps {
-  inputRef: RefObject<HTMLInputElement>
-  containerRef: RefObject<HTMLDivElement>
-}
-
-export const Input = ({ inputRef, containerRef }: InputProps) => {
+export const Input = ({ inputRef, containerRef }) => {
   const { theme } = useTheme()
   const [value, setValue] = useState("")
   const {
@@ -24,7 +19,7 @@ export const Input = ({ inputRef, containerRef }: InputProps) => {
   } = useShell()
 
   useEffect(() => {
-    containerRef.current?.scrollTo(0, containerRef.current.scrollHeight)
+    containerRef.current.scrollTo(0, containerRef.current.scrollHeight)
   }, [history, containerRef])
 
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {

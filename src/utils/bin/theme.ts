@@ -13,7 +13,7 @@ Args:
 
 Example: 
   theme ls # to list all themes
-  theme set Gruvbox # to set a theme`
+  theme set aura # to set a theme`
   }
 
   switch (args[0]) {

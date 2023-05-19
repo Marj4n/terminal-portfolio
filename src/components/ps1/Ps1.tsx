@@ -15,31 +15,25 @@ export const Ps1 = () => {
     <div>
       <span
         style={{
-          color: theme.yellow,
-        }}
-      >
-        guest
-      </span>
-      <span
-        style={{
-          color: theme.white,
-        }}
-      >
-        @
-      </span>
-      <span
-        style={{
           color: theme.green,
         }}
       >
-        {hostname}
+        guest@{hostname}
       </span>
       <span
         style={{
           color: theme.white,
         }}
       >
-        :$ ~
+        :
+        <span
+          style={{
+            color: theme.yellow,
+          }}
+        >
+          ~
+        </span>
+        $
       </span>
     </div>
   )

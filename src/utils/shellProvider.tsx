@@ -51,7 +51,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     if (!init) {
       execute()
     }
-  })
+  }, [command, init])
 
   const setHistory = (output: string) => {
     _setHistory([
