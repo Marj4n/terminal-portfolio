@@ -1,17 +1,40 @@
-import React from "react"
-import type { AppProps } from "next/app"
-import { ThemeProvider } from "next-themes"
+import React, { useEffect } from "react"
+import Head from "next/head"
+import { Layout } from "@/components/layout"
 
-import "@/styles/globals.css"
-import { Toaster } from "@/components/ui/toaster"
+import "@/styles/global.css"
+import { ShellProvider } from "@/utils/shellProvider"
+import { ThemeProvider } from "@/utils/themeProvider"
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component, pageProps }) => {
+  const inputRef = React.useRef<HTMLInputElement>(null)
+
+  const onClickAnywhere = () => {
+    inputRef.current?.focus()
+  }
+
+  useEffect(() => {
+    localStorage.setItem("visitedAt", new Date().toString())
+  }, [])
+
   return (
-    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
-      <Component {...pageProps} />
-      <Toaster />
+    <ThemeProvider>
+      <ShellProvider>
+        <Head>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+            key="viewport"
+          />
+          <title>Marjan | Terminal</title>
+        </Head>
+
+        <Layout onClick={onClickAnywhere}>
+          <Component {...pageProps} inputRef={inputRef} />
+        </Layout>
+      </ShellProvider>
     </ThemeProvider>
   )
 }
 
-export default MyApp
+export default App
