@@ -34,7 +34,10 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#D79921" />
-          <meta name="description" content="Marjan | Terminal" />
+          <meta
+            name="description"
+            content="Marjan Terminal, a portfolio website in the form of a terminal."
+          />
         </Head>
 
         <body>
