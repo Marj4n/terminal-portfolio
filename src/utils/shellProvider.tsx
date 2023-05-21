@@ -83,10 +83,10 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
 
   const execute = async () => {
     const [cmd, ...args] = command.split(" ").slice(1)
-
+    let output: string
     switch (cmd) {
       case "theme":
-        const output = await bin.theme(args, setTheme)
+        output = await bin.theme(args, setTheme)
 
         setHistory(output)
 
@@ -100,24 +100,16 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
 
         break
       case "ls":
-        //         const mainColor = getMainColor()
+        output = await ls()
 
-        //         const listDir = `total 7
-        // drwxr-xr-x 1 root root 4096 May  19 16:28 <span style="color: ${mainColor}">.</span>
-        // drwxr-xr-x 1 root root 4096 May  19 16:28 <span style="color: ${mainColor}">..</span>
-        // -rw-r--r-- 1 root root  147 May  19 16:28 <span style="color: ${mainColor}">.git</span>
-        // -rw-r--r-- 1 root root  147 May  19 16:28 README.md
-        // -rw-r--r-- 1 root root  147 May  19 16:28 index.html
-        // -rw-r--r-- 1 root root  147 May  19 16:28 main.js
-        // -rw-r--r-- 1 root root  147 May  19 16:28 style.css
-        //         `
-        //         setHistory(listDir)
-        const outputLs = await ls()
-        setHistory(outputLs)
+        setHistory(output)
+
         break
       case "pwd":
-        const outputPwd = await pwd()
-        setHistory(outputPwd)
+        output = await pwd()
+
+        setHistory(output)
+
         break
       case "":
         setHistory("")
