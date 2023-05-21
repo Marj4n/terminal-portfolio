@@ -1,3 +1,5 @@
+import { amogus } from "@/data/art"
+
 import packageJson from "../../../package.json"
 import * as bin from "./index"
 
@@ -47,11 +49,11 @@ export const repo = async (args?: string[]): Promise<string> => {
   return "Opening repository..."
 }
 
-// export const donate = async (args?: string[]): Promise<string> => {
-//   window.open(packageJson.funding.url, '_blank');
+export const donate = async (args?: string[]): Promise<string> => {
+  window.open(packageJson.funding.url, "_blank")
 
-//   return 'Opening donation url...';
-// };
+  return "Opening donation url..."
+}
 
 export const banner = (args?: string[]): string => {
   return `  ⠀⢀⣒⠒⠆⠤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

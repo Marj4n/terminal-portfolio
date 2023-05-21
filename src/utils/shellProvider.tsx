@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { getMainColor } from "@/api"
+import { amogus } from "@/data/art"
 
 import { History } from "../interfaces/history"
 import * as bin from "./bin"
@@ -85,6 +86,12 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     const [cmd, ...args] = command.split(" ").slice(1)
     let output: string
     switch (cmd) {
+      case "amogus":
+        output = amogus
+
+        setHistory(output)
+
+        break
       case "theme":
         output = await bin.theme(args, setTheme)
 
