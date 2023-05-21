@@ -12,6 +12,11 @@ interface DirectoryItem {
 
 export const ls = async (): Promise<string> => {
   const currentDir = localStorage.getItem("directory")
+
+  if (!currentDir) {
+    return "No directory found"
+  }
+
   const formattedDir = formatDir(currentDir)
   const targetDirectory = (get(directory, formattedDir) as DirectoryItem) || {}
 

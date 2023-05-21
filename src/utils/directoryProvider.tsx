@@ -13,24 +13,25 @@ export const DirectoryContext = React.createContext<{
   setDirectory: () => {},
 })
 
-let setCurrentDirectory: (dir: string) => void
+let HandleSetCurrentDirectory: (dir: string) => void
 
 export const setDirectory = (dir: string) => {
   localStorage.setItem("directory", dir)
-  setCurrentDirectory(dir)
+  HandleSetCurrentDirectory(dir)
 }
 
 export const DirectoryProvider: React.FC<Props> = ({ children }) => {
-  const [currentDirectory, _setCurrentDirectory] = useState<string>(
+  const [currentDirectory, setCurrentDirectory] = useState<string>(
     directory.default
   )
 
   useEffect(() => {
     const savedDirectory = localStorage.getItem("directory")
-    _setCurrentDirectory(savedDirectory || directory.default)
+    setDirectory(savedDirectory || directory.default)
+    setCurrentDirectory(savedDirectory || directory.default)
   }, [])
 
-  setCurrentDirectory = _setCurrentDirectory
+  HandleSetCurrentDirectory = setCurrentDirectory
 
   return (
     <DirectoryContext.Provider
