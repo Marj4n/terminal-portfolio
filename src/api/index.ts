@@ -46,6 +46,7 @@ export const getMainColor = () => {
   const platform = getPlatform()
   const themeName = localStorage.getItem("theme")
   const theme = themes.find((theme) => theme.name.toLowerCase() === themeName)
+  console.log(theme)
 
   switch (platform) {
     case "MacOS":

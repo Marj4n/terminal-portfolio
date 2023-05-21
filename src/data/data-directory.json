@@ -1,0 +1,46 @@
+{
+  "default": "/home/guest/",
+  "home": {
+    "type": "directory",
+    "name": "home",
+    "contents": {
+      "guest": {
+        "type": "directory",
+        "name": "guest",
+        "contents": {
+          "readme": {
+            "type": "file",
+            "name": "README.md",
+            "content": "Hello World!"
+          },
+          "index": {
+            "type": "file",
+            "name": "index.html",
+            "content": "<html><head><title>Hello World!</title></head><body><h1>Hello World!</h1></body></html>"
+          },
+          "style": {
+            "type": "file",
+            "name": "style.css",
+            "content": "h1 { color: red; } body { background-color: black; }"
+          },
+          "script": {
+            "type": "file",
+            "name": "script.js",
+            "content": "alert('Hello World!');"
+          },
+          "assets": {
+            "type": "directory",
+            "name": "assets",
+            "contents": {
+              "image": {
+                "type": "file",
+                "name": "image.png",
+                "content": "data:image/png;base64,iVBORw0KGgoAAAANSUh"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Head from "next/head"
 import { Layout } from "@/components/layout"
 
 import "@/styles/global.css"
+import { DirectoryProvider } from "@/utils/directoryProvider"
 import { ShellProvider } from "@/utils/shellProvider"
 import { ThemeProvider } from "@/utils/themeProvider"
 
@@ -20,18 +21,20 @@ const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider>
       <ShellProvider>
-        <Head>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-            key="viewport"
-          />
-          <title>Marjan | Terminal</title>
-        </Head>
+        <DirectoryProvider>
+          <Head>
+            <meta
+              name="viewport"
+              content="initial-scale=1.0, width=device-width"
+              key="viewport"
+            />
+            <title>Marjan | Terminal</title>
+          </Head>
 
-        <Layout onClick={onClickAnywhere}>
-          <Component {...pageProps} inputRef={inputRef} />
-        </Layout>
+          <Layout onClick={onClickAnywhere}>
+            <Component {...pageProps} inputRef={inputRef} />
+          </Layout>
+        </DirectoryProvider>
       </ShellProvider>
     </ThemeProvider>
   )
