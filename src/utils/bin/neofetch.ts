@@ -2,6 +2,7 @@ import { getMainColor, getPlatform } from "@/api"
 import { formatDistanceToNow } from "date-fns"
 
 import packageJson from "../../../package.json"
+import { isMobile } from "../isMobile"
 
 const macos = `
                     'c.
@@ -122,7 +123,7 @@ export const neofetch = async (args?: string[]): Promise<string> => {
   return `
   <table>
     <tr>
-      <td>${art}</td>
+      <td>${isMobile() ? "" : art}</td>
       <td>${info}</td>
     <tr>
   </table>

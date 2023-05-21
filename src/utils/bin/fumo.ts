@@ -1,9 +1,13 @@
 export const fumo = async (args: string[]): Promise<string> => {
   let output = ""
+  const isMobile = window.innerWidth <= 768
 
   switch (args[0]) {
     default:
-      return `
+      if (isMobile) {
+        return "This feature is best viewed on desktop."
+      } else {
+        return `
                       ᗜ˰ᗜ
       
       Usage: fumo [args]. Example: fumo cirno
@@ -12,6 +16,7 @@ export const fumo = async (args: string[]): Promise<string> => {
       Type 'fumo ls' to list all fumos.
       --
       `
+      }
     case "ls":
       return ` 
       List of fumos:
