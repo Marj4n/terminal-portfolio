@@ -1,4 +1,4 @@
-# NextJS - Typescript - MDX - Blog
+# [Marj4n | Terminal](https://term.m4tt72.com)
 
 A Next.js starter for your next blog or personal site. Built with:
 
@@ -8,8 +8,6 @@ A Next.js starter for your next blog or personal site. Built with:
 - Component with [Shadcn](https://ui.shadcn.com/)
 - Linting with [ESLint](https://eslint.org/)
 - Formatting with [Prettier](https://prettier.io/)
-
-👀 [View the Live Demo](https://nextjs-typescript-mdx-blog-starter.vercel.app/)
 
 ## Usage
 

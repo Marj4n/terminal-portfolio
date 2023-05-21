@@ -1,15 +1,15 @@
 {
   "name": "marjan-terminal",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "license": "MIT",
   "author": {
-    "name": "Marjannnnnn",
+    "name": "Marj4n",
     "url": "https://nivekts.me",
     "email": "kevinyf.ts@gmail.com"
   },
   "funding": {
     "type": "ko-fi",
-    "url": "https://ko-fi.com/marjann"
+    "url": "https://ko-fi.com/marj4n"
   },
   "scripts": {
     "dev": "next dev",
