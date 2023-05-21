@@ -43,7 +43,8 @@ Here's a sample of the [`config.json`](src/data/config.json) file:
   "social": {
     "instagram": "__kevnnn_",
     "github": "Marj4n",
-    "linkedin": "kevin-yardan-fauzan-73baaa21b"
+    "linkedin": "kevin-yardan-fauzan-73baaa21b",
+    "twitter": "Marj4nn"
   },
   "theme": "3024Night",
   "border": false
