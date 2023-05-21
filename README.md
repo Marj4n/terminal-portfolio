@@ -1,31 +1,61 @@
-# [Marj4n | Terminal](https://term.m4tt72.com)
+# [Marj4n | Terminal](https://marjan-terminal.vercel.app)
 
-A Next.js starter for your next blog or personal site. Built with:
+A portfolio but in a terminal.
 
-- [Typescript](https://www.typescriptlang.org/)
-- Write posts with [MDX](https://mdxjs.com/)
-- Style with [Tailwind CSS](https://tailwindcss.com/)
-- Component with [Shadcn](https://ui.shadcn.com/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
+## Quick Start
 
-## Usage
+### Clone the repo
+
+1. Open your terminal and clone the repo:
 
 ```bash
-npx create-next-app -e https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter
-
-# or
-
-yarn create next-app -e https://github.com/Marjannnnnn/nextjs-typescript-mdx-blog-starter
-
-cd [project-name]
-
-npm run dev
-
-# or
-
-yarn dev
-
+git clone https://github.com/Marj4n/terminal-portfolio.git
 ```
 
-Your new site will be up at http://localhost:3000/
+2. Go to the project directory and install dependencies:
+
+```bash
+cd terminal-portfolio
+
+# using yarn
+yarn install
+
+# using npm
+npm install
+```
+
+3. Run the project:
+
+```bash
+# using yarn
+yarn start
+
+# using npm
+npm start
+```
+
+## Configuration
+
+Here's a sample of the `[src/data/config.json](config.json)` file:
+
+```json
+{
+  "social": {
+    "instagram": "__kevnnn_",
+    "github": "Marj4n",
+    "linkedin": "kevin-yardan-fauzan-73baaa21b"
+  },
+  "theme": "3024Night",
+  "border": false
+}
+```
+
+## Themes
+
+Run `theme ls` to see all available themes and `theme set <theme>` to set the theme.
+
+or you can edit the themes for your own needs in the `[src/data/themes.json](themes.json)` file.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
