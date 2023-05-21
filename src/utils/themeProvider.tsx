@@ -22,33 +22,32 @@ interface Props {
 export const useTheme = () => React.useContext(ThemeContext)
 
 export const ThemeProvider: React.FC<Props> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(Themes[0])
+  const [theme, _setTheme] = useState<Theme>(Themes[0])
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme")
-    setTheme(
-      savedTheme
-        ? Themes.find((t) => t.name === savedTheme) || Themes[0]
-        : Themes[0]
-    )
-    handleSetTheme(savedTheme || Themes[0].name)
+
+    setTheme(savedTheme || config.theme)
   }, [])
 
-  const handleSetTheme = (name: string) => {
-    const selectedTheme = Themes.find(
-      (t) => t.name.toLowerCase() === name.toLowerCase()
+  const setTheme = (name: string) => {
+    const index = Themes.findIndex(
+      (colorScheme) => colorScheme.name.toLowerCase() === name
     )
-    if (selectedTheme) {
-      setTheme(selectedTheme)
-      localStorage.setItem("theme", selectedTheme.name)
-      return `Theme ${selectedTheme.name} set successfully!`
-    } else {
+
+    if (index === -1) {
       return `Theme '${name}' not found. Try 'theme ls' to see the list of available themes.`
     }
+
+    _setTheme(Themes[index])
+
+    localStorage.setItem("theme", name)
+
+    return `Theme ${Themes[index].name} set successfully!`
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   )
