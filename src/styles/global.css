@@ -13,6 +13,13 @@
   font-size: 14px;
 }
 
+/* Responsive styles for screens smaller than or equal to 768px */
+@media (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+}
+
 html,
 body,
 body > div:first-child,
