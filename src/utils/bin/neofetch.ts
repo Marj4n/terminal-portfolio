@@ -108,6 +108,8 @@ const getInfo = () => {
     visitedAt
   )}\n`
   message += `<span style="color: ${mainColor}">Author</span>: ${packageJson.author.name} (${packageJson.author.email})\n`
+  message += `<span style="color: ${mainColor}">License</span>: ${packageJson.license}\n`
+  message += `<span style="color: ${mainColor}">Support</span>: <a href="${packageJson.funding.url}">${packageJson.funding.url}\n</a>`
 
   return message
 }

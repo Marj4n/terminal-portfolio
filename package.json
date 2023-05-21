@@ -1,6 +1,6 @@
 {
   "name": "marjan-terminal",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "license": "MIT",
   "author": {
     "name": "Marjannnnnn",
@@ -8,8 +8,8 @@
     "email": "kevinyf.ts@gmail.com"
   },
   "funding": {
-    "type": "patreon",
-    "url": "https://add-your-patreon-url-here"
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/marjann"
   },
   "scripts": {
     "dev": "next dev",
