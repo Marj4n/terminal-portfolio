@@ -53,8 +53,7 @@ Here's a sample of the [`config.json`](src/data/config.json) file:
 ## Themes
 
 Run `theme ls` to see all available themes and `theme set <theme>` to set the theme.
-
-or you can edit the themes for your own needs in the [`themes.json`](src/data/themes.json) file.
+Or you can edit the themes for your own needs in the [`themes.json`](src/data/themes.json) file.
 
 ## Contributing
 
