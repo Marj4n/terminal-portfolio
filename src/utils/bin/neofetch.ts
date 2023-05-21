@@ -109,7 +109,8 @@ const getInfo = () => {
   )}\n`
   message += `<span style="color: ${mainColor}">Author</span>: ${packageJson.author.name} (${packageJson.author.email})\n`
   message += `<span style="color: ${mainColor}">License</span>: ${packageJson.license}\n`
-  message += `<span style="color: ${mainColor}">Support me</span>: <a href="${packageJson.funding.url}">${packageJson.funding.url}\n</a>`
+  message += `<span style="color: ${mainColor}">SupportMe</span>: <a href="${packageJson.funding.url}">${packageJson.funding.url}\n</a>`
+  message += `<span style="color: ${mainColor}">Source</span>: <a href="${packageJson.repository.url}">${packageJson.repository.url}\n</a>`
 
   return message
 }

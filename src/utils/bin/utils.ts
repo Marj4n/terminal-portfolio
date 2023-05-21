@@ -81,8 +81,7 @@ export const banner = (args?: string[]): string => {
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠵⠗⠺⠟⠖⢈⡣⡄⠀⠀⠀⠀⢀⣼⡤⣬⣽⠾⠋⠉⠑⠺⠧⣀⣤⣤⡠⠟⠃ 
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠷⠶⠦⠶⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 --
-Type 'repo' to see the source code of this terminal portfolio. 🌟
-Appriciate any feedback or suggestions. 🙏
+Type 'repo' to see the source code of this terminal portfolio.🌟
 --
 `
 }
