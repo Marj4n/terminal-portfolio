@@ -28,7 +28,7 @@ export const cat = async (args: string[]): Promise<string> => {
   if (fileContent) {
     return fileContent;
   } else {
-    return "";
+    return "File not found, try typing 'ls' to see the available files";
   }
 };
 
