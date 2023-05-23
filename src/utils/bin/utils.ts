@@ -1,3 +1,5 @@
+import { getMainColor } from "@/api"
+
 import packageJson from "../../../package.json"
 import { isMobile } from "../isMobile"
 import * as bin from "./index"
@@ -67,6 +69,7 @@ export const donate = async (args?: string[]): Promise<string> => {
 }
 
 export const banner = (args?: string[]): string => {
+  const mainColor = getMainColor()
   const desktopBanner = `  ⠀⢀⣒⠒⠆⠤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   ⢠⡛⠛⠻⣷⣶⣦⣬⣕⡒⠤⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   ⡿⢿⣿⣿⣿⣿⣿⡿⠿⠿⣿⣳⠖⢋⣩⣭⣿⣶⡤⠶⠶⢶⣒⣲⢶⣉⣐⣒⣒⣒⢤⡀⠀⠀⠀⠀⠀⠀⠀
@@ -95,6 +98,7 @@ export const banner = (args?: string[]): string => {
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠷⠶⠦⠶⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 --
 Type 'repo' to see the source code of this terminal portfolio.🌟
+<span style="color:${mainColor}">New</span> 'statistic' to see the statistic of this terminal portfolio.📈
 --
 `
 
@@ -129,6 +133,7 @@ Marjan Terminal v${packageJson.version}
 Type 'help' to see list of available commands.
 --
 Type 'repo' to see the source code of this terminal portfolio.🌟
+<span style="color:${mainColor}">New</span> 'statistic' to see the statistic of this terminal portfolio.📈
 --
 `
 
