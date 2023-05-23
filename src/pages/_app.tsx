@@ -3,6 +3,7 @@ import Head from "next/head"
 import { Layout } from "@/components/layout"
 
 import "@/styles/global.css"
+import { incrementVisitorCount } from "@/api"
 import { DirectoryProvider } from "@/utils/directoryProvider"
 import { ShellProvider } from "@/utils/shellProvider"
 import { ThemeProvider } from "@/utils/themeProvider"
@@ -15,7 +16,24 @@ const App = ({ Component, pageProps }) => {
   }
 
   useEffect(() => {
+    const hasIncremented = localStorage.getItem("hasVisited")
+
+    if (!hasIncremented) {
+      incrementVisitorCount()
+      localStorage.setItem("hasVisited", "true")
+    }
+
     localStorage.setItem("visitedAt", new Date().toString())
+
+    const handleBeforeUnload = () => {
+      localStorage.removeItem("hasVisited")
+    }
+
+    window.addEventListener("beforeunload", handleBeforeUnload)
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload)
+    }
   }, [])
 
   return (
