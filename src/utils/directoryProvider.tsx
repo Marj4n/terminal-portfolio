@@ -5,11 +5,13 @@ interface Props {
   children: React.ReactNode
 }
 
+const defaultDirectory = directory.default
+
 export const DirectoryContext = React.createContext<{
   directory: string
   setDirectory: (dir: string) => void
 }>({
-  directory: directory.default,
+  directory: defaultDirectory,
   setDirectory: () => {},
 })
 
@@ -21,14 +23,13 @@ export const setDirectory = (dir: string) => {
 }
 
 export const DirectoryProvider: React.FC<Props> = ({ children }) => {
-  const [currentDirectory, _setCurrentDirectory] = useState<string>(
-    directory.default
-  )
+  const [currentDirectory, _setCurrentDirectory] =
+    useState<string>(defaultDirectory)
 
   useEffect(() => {
     const savedDirectory = localStorage.getItem("directory")
-    setDirectory(savedDirectory || directory.default)
-    _setCurrentDirectory(savedDirectory || directory.default)
+    setDirectory(savedDirectory || defaultDirectory)
+    _setCurrentDirectory(savedDirectory || defaultDirectory)
   }, [])
 
   setCurrentDirectory = _setCurrentDirectory

@@ -1,5 +1,5 @@
 {
-  "default": "/home/guest/",
+  "default": "/home/guest",
   "home": {
     "type": "directory",
     "name": "home",
@@ -16,7 +16,7 @@
           "index": {
             "type": "file",
             "name": "index.html",
-            "content": "<html><head><title>Hello World!</title></head><body><h1>Hello World!</h1></body></html>"
+            "content": "<html><head><title>Hello World!</title></head><body><h1>Hello World!</h1></body></html>//still in progress"
           },
           "style": {
             "type": "file",
@@ -38,6 +38,17 @@
                 "content": "data:image/png;base64,iVBORw0KGgoAAAANSUh"
               }
             }
+          }
+        }
+      },
+      "user":{
+        "type": "directory",
+        "name": "user",
+        "contents":{
+          "jokowi": {
+            "type": "file",
+            "name": "jokowi.txt",
+            "content": "Jokowi Sampai Mati"
           }
         }
       }

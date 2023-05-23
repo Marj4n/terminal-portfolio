@@ -1,26 +1,16 @@
 import React, { useEffect } from "react"
 import { getMainColor } from "@/api"
 import { amogus } from "@/data/art"
+import { Shell } from "@/interfaces/shell"
 
 import { History } from "../interfaces/history"
 import * as bin from "./bin"
+import { cd } from "./bin/cd"
 import { ls } from "./bin/ls"
 import { pwd } from "./bin/pwd"
 import { useTheme } from "./themeProvider"
 
-interface ShellContextType {
-  history: History[]
-  command: string
-  lastCommandIndex: number
-
-  setHistory: (output: string) => void
-  setCommand: (command: string) => void
-  setLastCommandIndex: (index: number) => void
-  execute: (command: string) => Promise<void>
-  clearHistory: () => void
-}
-
-const initialContext: ShellContextType = {
+const initialContext: Shell = {
   history: [],
   command: "",
   lastCommandIndex: 0,
@@ -31,7 +21,7 @@ const initialContext: ShellContextType = {
   clearHistory: () => {},
 }
 
-const ShellContext = React.createContext<ShellContextType>(initialContext)
+const ShellContext = React.createContext<Shell>(initialContext)
 
 interface ShellProviderProps {
   children: React.ReactNode

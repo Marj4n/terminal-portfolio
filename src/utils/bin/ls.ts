@@ -1,14 +1,9 @@
 import { getMainColor } from "@/api"
 import directory from "@/data/data-directory.json"
+import { DirectoryItem } from "@/interfaces/directory"
 import get from "lodash/get"
 
 import { formatDir } from "../formatDir"
-
-interface DirectoryItem {
-  type: string
-  name: string
-  contents?: Record<string, DirectoryItem>
-}
 
 export const ls = async (): Promise<string> => {
   const currentDir = localStorage.getItem("directory")
@@ -31,7 +26,7 @@ drwxr-xr-x 1 root root 4096 May 19 16:28 <span style="color: ${mainColor}">..</s
 ${contents
   .map((item: DirectoryItem) => {
     if (item.type === "directory") {
-      return `-rw-r--r-- 1 root root  147 May 19 16:28 <span style="color: ${mainColor}">${item.type}</span>`
+      return `-rw-r--r-- 1 root root  147 May 19 16:28 <span style="color: ${mainColor}">${item.name}</span>`
     } else {
       return `-rw-r--r-- 1 root root  147 May 19 16:28 ${item.name}`
     }
