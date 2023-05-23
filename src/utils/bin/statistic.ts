@@ -1,6 +1,6 @@
 import { getGithubFollowers, getProjects, getVisitorCount } from "@/api"
 
-export const statistics = async (args: string[]): Promise<string> => {
+export const statistic = async (args: string[]): Promise<string> => {
   const repo = await getProjects()
   const visitorCount = await getVisitorCount()
   const githubFollower = await getGithubFollowers()
