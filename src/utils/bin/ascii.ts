@@ -3,13 +3,12 @@ import figlet, { Fonts, Options } from "figlet"
 export const ascii = async (args: string[]): Promise<string> => {
   const [font, ...textArr] = args
   const text = textArr.join(" ")
-  console.log(font)
 
-  if (text === "listfonts") {
+  if (font === "listfonts") {
     return "standard, 3d, 3d2"
   }
 
-  if (!text && !font) {
+  if (!text) {
     return `Usage: ascii [font] [text]. Example: ascii 3d hello
       Use 'ascii listfonts' to list all fonts.`
   }
@@ -35,7 +34,7 @@ export const ascii = async (args: string[]): Promise<string> => {
     }
 
     const asciiText = await new Promise<string>((resolve, reject) => {
-      figlet.text(text || font, fontOptions, (err, data) => {
+      figlet.text(text, fontOptions, (err, data) => {
         if (err) {
           console.error(err)
           reject(err)
