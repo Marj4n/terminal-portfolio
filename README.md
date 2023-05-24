@@ -51,6 +51,10 @@ Here's a sample of the [`config.json`](src/data/config.json) file:
 }
 ```
 
+### Visitor Statistics
+
+Enter your firebase project configuration in the .env for see visitor statistics.
+
 ## Themes
 
 Run `theme ls` to see all available themes and `theme set <theme>` to set the theme.
