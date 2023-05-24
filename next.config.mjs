@@ -17,7 +17,7 @@ const nextConfig = {
         },
       })
     }
-    return config
+    return config 
   },
 }
 
