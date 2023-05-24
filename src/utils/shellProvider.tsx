@@ -5,6 +5,7 @@ import { Shell } from "@/interfaces/shell"
 
 import { History } from "../interfaces/history"
 import * as bin from "./bin"
+import { ascii } from "./bin/ascii"
 import { cd } from "./bin/cd"
 import { ls } from "./bin/ls"
 import { pwd } from "./bin/pwd"
@@ -108,6 +109,10 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         setHistory(output)
 
         break
+      case "ascii":
+        output = await ascii(args)
+
+        setHistory(output)
       case "":
         setHistory("")
         break

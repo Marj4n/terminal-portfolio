@@ -7,6 +7,7 @@ export const commandExists = (command: string) => {
     "ls",
     "pwd",
     "amogus",
+    "ascii",
     ...Object.keys(bin),
   ]
 
