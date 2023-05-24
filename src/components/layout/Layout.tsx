@@ -18,7 +18,7 @@ const Layout: React.FC<Props> = ({ children, onClick }) => {
       }}
     >
       <main
-        className="h-full w-full p-2"
+        className="h-full w-full"
         style={{
           background: theme.background,
         }}
