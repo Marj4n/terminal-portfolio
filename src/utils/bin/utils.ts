@@ -1,4 +1,5 @@
 import { getMainColor } from "@/api"
+import { gigaChad, gun } from "@/data/art"
 
 import packageJson from "../../../package.json"
 import { isMobile } from "../isMobile"
@@ -66,6 +67,26 @@ export const donate = async (args?: string[]): Promise<string> => {
   }, 1000)
 
   return "Opening donation url..."
+}
+
+export const vim = async (args?: string[]): Promise<string> => {
+  return "nvim is much better than vim. Try 'nvim' instead."
+}
+
+export const nvim = async (args?: string[]): Promise<string> => {
+  return "nvim is not installed. Try 'sudo apt install nvim'."
+}
+
+export const nano = async (args?: string[]): Promise<string> => {
+  return "Nano is for noobs. Try 'vim' instead."
+}
+
+export const code = async (args?: string[]): Promise<string> => {
+  return `${gun}\nWhat do you think this is? Visual Studio Code? Try 'vim' instead.`
+}
+
+export const notepad = async (args?: string[]): Promise<string> => {
+  return `${gigaChad}`
 }
 
 export const banner = (args?: string[]): string => {
