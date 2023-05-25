@@ -109,10 +109,6 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
         setHistory(output)
 
         break
-      case "ascii":
-        output = await ascii(args)
-
-        setHistory(output)
       case "":
         setHistory("")
         break
