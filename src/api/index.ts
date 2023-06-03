@@ -114,3 +114,9 @@ export const incrementVisitorCount = async () => {
     console.error("Error incrementing visitor count:", error)
   }
 }
+
+export const getSpotifyTopTracks = async () => {
+  const response = await axios.get("/api/top-tracks")
+  const data = response.data.tracks
+  return data
+}

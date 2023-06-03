@@ -36,7 +36,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#b9e6da" />
           <meta
             name="description"
-            content="Marjan Terminal, a portfolio website in the form of a terminal."
+            content="Marjan Terminal, a terminal-style portfolio built with Next.js and Tailwind CSS!"
           />
         </Head>
 
