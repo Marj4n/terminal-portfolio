@@ -44,7 +44,8 @@ Here's a sample of the [`config.json`](src/data/config.json) file:
     "instagram": "__kevnnn_",
     "github": "Marj4n",
     "linkedin": "kevin-yardan-fauzan-73baaa21b",
-    "twitter": "Marj4nn"
+    "twitter": "Marj4nn",
+    "spotify": "0c4ostaav8xjbk4i5chtmin7e"
   },
   "theme": "3024Night",
   "border": false

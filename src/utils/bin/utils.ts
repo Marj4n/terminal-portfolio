@@ -119,7 +119,7 @@ export const banner = (args?: string[]): string => {
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠷⠶⠦⠶⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 --
 Type 'repo' to see the source code of this terminal portfolio.🌟
-<span style="color:${mainColor}">New</span> 'statistic' to see the statistic of this terminal portfolio.📈
+<span style="color:${mainColor}">New</span> 'spotify' to see what I'm listening to.🎧
 --
 `
 
@@ -154,7 +154,7 @@ Marjan Terminal v${packageJson.version}
 Type 'help' to see list of available commands.
 --
 Type 'repo' to see the source code of this terminal portfolio.🌟
-<span style="color:${mainColor}">New</span> 'statistic' to see the statistic of this terminal portfolio.📈
+<span style="color:${mainColor}">New</span> 'spotify' to see what I'm listening to.🎧
 --
 `
 
