@@ -36,7 +36,6 @@ Type 'ascii ls' to list all fonts
             console.error(err)
             reject(err)
           } else if (data) {
-            console.log(data)
             resolve(data)
           } else {
             reject(new Error("Failed to generate ASCII art"))

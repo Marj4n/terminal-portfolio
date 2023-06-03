@@ -56,3 +56,13 @@ export const getPlaylists = async () => {
     },
   })
 }
+
+export const getUser = async () => {
+  const { access_token } = await getAccessToken()
+  const userEndpoint = `https://api.spotify.com/v1/me`
+  return fetch(userEndpoint, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  })
+}

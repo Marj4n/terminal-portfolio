@@ -120,3 +120,15 @@ export const getSpotifyTopTracks = async () => {
   const data = response.data.tracks
   return data
 }
+
+export const getSpotifyPlaylists = async () => {
+  const response = await axios.get("/api/playlists")
+  const data = response.data.playlists
+  return data
+}
+
+export const getSpotifyUser = async () => {
+  const response = await axios.get("/api/user")
+  const data = response.data.user
+  return data
+}
