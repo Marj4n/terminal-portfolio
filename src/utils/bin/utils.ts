@@ -47,7 +47,10 @@ export const email = async (args: string[]): Promise<string> => {
 
 export const sudo = async (args: string[]): Promise<string> => {
   setTimeout(function () {
-    window.open("https://youtu.be/homwfyuurUY")
+    // window.open("https://youtu.be/homwfyuurUY")
+    // audio in public folder
+    const audio = new Audio("/assets/BaonCikadap.mp3")
+    audio.play()
   }, 1000)
 
   return `Permission denied: unable to run the command '${args[0]}' as root.`
